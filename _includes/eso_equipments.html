@@ -1,0 +1,25 @@
+{% if page.eso.equipments %}
+    <h3><strong>Ausrüstung</strong></h3>
+    {% for equipment in page.eso.equipments %}
+        {% assign section_id = equipment[0] %}
+        {% assign section_title = equipment[1].title %}
+
+        {% capture section_content %}
+            {% if equipment[1].info %}
+            <p class="alert alert-info"><strong>{{ equipment[1].info }}</strong></p>
+            {% endif %}
+            <ul>
+                {% for data in equipment[1].data %}
+                    {% if data[1].poison and data[1].type %}
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}, {{ data[1].poison }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a> - {{ data[1].type }}</li>
+                    {% elsif data[1].type %}
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a> - {{ data[1].type }}</li>
+                    {% else %}
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

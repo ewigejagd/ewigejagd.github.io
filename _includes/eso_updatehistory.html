@@ -1,0 +1,16 @@
+{% if page.eso.updatehistory %}
+    <h3><strong>Updateverlauf</strong></h3>
+    {% for update in page.eso.updatehistory %}
+        {% assign section_id = update[0] %}
+        {% assign section_title = update[1].title %}
+
+        {% capture section_content %}
+            <ul>
+                {% for data in update[1].data %}
+                    <li>{{ data }}</li>
+                {% endfor %}
+            </ul>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

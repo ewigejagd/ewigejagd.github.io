@@ -1,0 +1,71 @@
+{% if page.eso.cps %}
+    {% assign warrior = "Unangreifbar,Magieschild,Resistent,Fokus auf mittlere Rüstung,Abgehärtet,Fokus auf leichte Rüstung,Elementarverteidiger,Dickhäutig,Verteidigungsexperte,Fokus auf schwere Rüstung,Bastion,Schnelle Erholung" | split: "," %}
+    {% assign thief = "Kriegsherr,Fokus zerschlagen,Absauger,Sprinter,Tenazität,Arkanist,Mondkalb,Gesund,Schatten,Verdorben,Schattenhafter Schutz,Gelenkigkeit" | split: "," %}
+    {% assign mage = "Magieerosion,Elfenblut,Gesegnet,Elementarexperte,Stabexperte,Experte für physische Waffen,Waffenmeister,Berstende Hiebe,Traumaturg,Kräftig,Durchdringend,Präzise Schläge" | split: "," %}
+
+    <h3><strong>Championpunkte</strong></h3>
+    {% for cp in page.eso.cps %}
+        {% assign section_id = cp[0] %}
+        {% assign section_title = cp[1].title %}
+
+        {% capture section_content %}
+            <p class="alert alert-danger">
+                {% assign warriorcps = "" | split: ',' %}
+                {% for data in cp[1].data.warrior %}
+                    {% if data != 0 %}
+                        {% assign warriorcp = warrior[forloop.index0] | append: ' ('| append: data | append: ')' %}
+                        {% assign warriorcps = warriorcps | push: warriorcp %}
+                    {% endif %}
+                {% endfor %}
+                {% for data in warriorcps %}
+                    {% if data != 0 %}
+                        {% if forloop.last == false %}
+                            {{ data }},
+                        {% else %}
+                            {{ data }}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </p>
+
+            <p class="alert alert-success">
+                {% assign thiefcps = "" | split: ',' %}
+                {% for data in cp[1].data.thief %}
+                    {% if data != 0 %}
+                        {% assign thiefcp = thief[forloop.index0] | append: ' ('| append: data | append: ')' %}
+                        {% assign thiefcps = thiefcps | push: thiefcp %}
+                    {% endif %}
+                {% endfor %}
+                {% for data in thiefcps %}
+                    {% if data != 0 %}
+                        {% if forloop.last == false %}
+                            {{ data }},
+                        {% else %}
+                            {{ data }}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </p>
+
+            <p class="alert alert-info">
+                {% assign magecps = "" | split: ',' %}
+                {% for data in cp[1].data.mage %}
+                    {% if data != 0 %}
+                        {% assign magecp = mage[forloop.index0] | append: ' ('| append: data | append: ')' %}
+                        {% assign magecps = magecps | push: magecp %}
+                    {% endif %}
+                {% endfor %}
+                {% for data in magecps %}
+                    {% if data != 0 %}
+                        {% if forloop.last == false %}
+                            {{ data }},
+                        {% else %}
+                            {{ data }}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </p>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

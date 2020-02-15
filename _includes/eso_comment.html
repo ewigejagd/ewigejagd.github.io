@@ -1,0 +1,7 @@
+{% if page.eso.comment %}
+    <h3><strong>Kommentar</strong></h3>
+    {% capture section_content %}
+        {{ page.eso.comment.data }}
+    {% endcapture %}
+    {% include section.html content=section_content id="comment" title=page.eso.comment.title %}
+{% endif %}

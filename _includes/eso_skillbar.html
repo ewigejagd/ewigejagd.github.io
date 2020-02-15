@@ -1,0 +1,11 @@
+{% if include.skillbar %}
+    <ul class="eso-widgets-bar">
+        {% for skill in include.skillbar %}
+            {% if forloop.last == false %}
+                <li><a href="https://www.elderscrollsbote.de/skill={{ skill }}" target="_blank"><img src="https://www.elderscrollsbote.de/esodb/images/skills/{{ skill }}.png"></a></li>
+            {% else %}
+                <li class="eso-widgets-ultimate"><a href="https://www.elderscrollsbote.de/skill={{ skill }}" target="_blank"><img src="https://www.elderscrollsbote.de/esodb/images/skills/{{ skill }}.png"></a></li>
+            {% endif %}
+      {% endfor %}
+    </ul>
+{% endif %}

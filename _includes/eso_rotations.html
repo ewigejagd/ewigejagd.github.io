@@ -1,0 +1,17 @@
+{% if page.eso.rotations %}
+    <h3><strong>Rotation</strong></h3>
+    {% for rotation in page.eso.rotations %}
+        {% assign section_id = rotation[0] %}
+        {% assign section_title = rotation[1].title %}
+
+        {% capture section_content %}
+            <p class="alert alert-info"><strong>L = Leichter Angriff, S = Schwerer Angriff, WW = Waffenwechsel, W = Wiederholung</strong></p>
+            <ul>
+                {% for data in rotation[1].data %}
+                    <li>{{ data }}</li>
+                {% endfor %}
+            </ul>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

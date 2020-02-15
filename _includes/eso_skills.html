@@ -1,0 +1,24 @@
+{% if page.eso.skills %}
+    <h3><strong>Fertigkeiten</strong></h3>
+    {% for skillcategory in page.eso.skills %}
+        {% assign section_id = skillcategory[0] %}
+        {% assign section_title = skillcategory[1].title %}
+
+        {% capture section_content %}
+            <ul>
+            {% for skilltree in skillcategory[1].data %}  
+                <li><strong>{{ skilltree[1].name }}</strong> - 
+                {% for skill in skilltree[1].skills %}
+                    {% if forloop.last == false %}
+                        <a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a>,
+                    {% else %}
+                        <a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a>
+                    {% endif %}
+                {% endfor %}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

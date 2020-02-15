@@ -1,0 +1,12 @@
+<section class="panel panel-default card card-spoiler mb-3">
+    <header class="panel-heading card-header">
+        <h5 class="panel-title mb-0">
+            <a class="card-link text-body dropdown-toggle default" data-toggle="collapse" href="#{{ include.id }}" aria-expanded="false" aria-controls="{{ include.id }}">{{ include.title }} <span class="caret"></span></a>
+        </h5>
+    </header>
+    <div class="card-body panel-collapse collapse" id="{{ include.id }}" aria-expanded="false" role="complementary">
+        <div class="panel-body">
+            {{ include.content }}
+        </div>
+    </div>
+</section>

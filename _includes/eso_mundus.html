@@ -1,0 +1,32 @@
+{% if page.eso.mundus %}
+    {% assign mundus = page.eso.mundus %}
+    {% if mundus == "Atronach" %}
+        <p class="text-center">Mundus: <strong>Atronach</strong><br><em class="text-muted">(Erhöht die Magickaregeneration um 238)</em></p>
+    {% elsif mundus == "Dieb" %}
+        <p class="text-center">Mundus: <strong>Dieb</strong><br><em class="text-muted">(Erhöht kritische Trefferchance um 7%)</em></p>
+    {% elsif mundus == "Krieger" %}
+        <p class="text-center">Mundus: <strong>Krieger</strong><br><em class="text-muted">(Erhöht Waffenkraft um 238)</em></p>
+    {% elsif mundus == "Fürst" %}
+        <p class="text-center">Mundus: <strong>Fürst</strong><br><em class="text-muted">(Erhöht maximales Leben um 2231)</em></p>
+    {% elsif mundus == "Fürstin" %}
+        <p class="text-center">Mundus: <strong>Fürstin</strong><br><em class="text-muted">(Erhöht physische und magische Resistenz um 2752)</em></p>
+    {% elsif mundus == "Magier" %}
+        <p class="text-center">Mundus: <strong>Magier</strong><br><em class="text-muted">(Erhöht die maximale Magicka um 2028)</em></p>
+    {% elsif mundus == "Lehrling" %}
+        <p class="text-center">Mundus: <strong>Lehrling</strong><br><em class="text-muted">(Erhöht Magiekraft um 238)</em></p>
+    {% elsif mundus == "Liebenden" %}
+        <p class="text-center">Mundus: <strong>Liebenden</strong><br><em class="text-muted">(Erhöht Rüstungs- und Magiedurchdringung um 2752)</em></p>
+    {% elsif mundus == "Ritual" %}
+        <p class="text-center">Mundus: <strong>Ritual</strong><br><em class="text-muted">(Erhöht die Höhe der Heilungen um 10%)</em></p>
+    {% elsif mundus == "Schatten" %}
+        <p class="text-center">Mundus: <strong>Schatten</strong><br><em class="text-muted">(Erhöht den kritischen Schaden um 13%)</em></p>
+    {% elsif mundus == "Schlange" %}
+        <p class="text-center">Mundus: <strong>Schlange</strong><br><em class="text-muted">(Erhöht die Ausdauerregeneration um 238)</em></p>
+    {% elsif mundus == "Schlachtross" %}
+        <p class="text-center">Mundus: <strong>Schlachtross</strong><br><em class="text-muted">(Erhöht Lebensregeneration um 238 und Bewegungsgeschwindigkeit um 10%)</em></p>
+    {% elsif mundus == "Turm" %}
+        <p class="text-center">Mundus: <strong>Turm</strong><br><em class="text-muted">(Erhöht maximale Ausdauer um 2028)</em></p>
+    {% else %}
+        <p class="text-center">Mundus: <strong>{{ mundus }}</strong><br><em class="text-muted">(???)</em></p>
+    {% endif %}
+{% endif %}
