@@ -110,6 +110,14 @@ img {
   border-color:{{ site.page-text-col }} !important;
 }
 
+.comment-link a {
+  color: {{ site.link-col }} !important;
+}
+.comment-link a:hover,
+.comment-link a:focus {
+  color: {{ site.hover-col }} !important;
+}
+
 /* --- Navbar --- */
 
 .navbar-custom {
