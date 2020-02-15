@@ -2,11 +2,12 @@
 layout: post
 title: Zauberer Tank
 author: Darkcaar & Dorios
-subtitle: Ein widerstandsfähiger Exot
+subtitle: Der dunkle Beschützer
 tags: [Build]
 comments: true
 updated: false
 eso:
+    description: Dieser Tank bietet eine starke Heilung durch den Clannbann, sowie eine starke Selbstversorgung der Ausdauer, durch die Fähigkeit Dunkles Abkommen. Hohes Leben durch Passive Fähigkeiten.
     class: Zauberer
     race:  Dunkelelf
     attributes:
@@ -245,6 +246,10 @@ eso:
 #       title: 
 #       data: 
 ---
+
+<div class="eso-widgets-info">
+    {% include eso_description.html %}
+</div>
 
 <div class="eso-widgets-build">
     {% include eso_classrace.html %}
