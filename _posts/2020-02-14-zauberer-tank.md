@@ -7,7 +7,7 @@ tags: [Build]
 comments: true
 updated: false
 eso:
-    description: Dieser Tank bietet eine starke Heilung durch den Clannbann, sowie eine starke Selbstversorgung der Ausdauer, durch die Fähigkeit Dunkles Abkommen. Hohes Leben durch Passive Fähigkeiten.
+    description: Dieser Tank bietet eine starke Selbstheilung durch den instabilen Clannbann, sowie eine hohe Rückgewinnung der Ausdauer über die Fähigkeit "Dunkles Abkommen". Zudem erhält er viel Leben durch seine passiven Fähigkeiten.
     class: Zauberer
     race:  Dunkelelf
     attributes:
