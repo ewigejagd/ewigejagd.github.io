@@ -1,0 +1,30 @@
+{% if page.eso.golden %}
+    {% assign qualities = "#ffffff,#2cc50d,#3991ff,#9f2df7,#eec827" | split: "," %}
+    {% for goldenweekend in page.eso.golden %}
+        {% assign section_id = goldenweekend[0] %}
+        {% assign section_title = goldenweekend[1].title %}
+
+        {% capture section_content %}
+            <ul>
+            {% for itemset in goldenweekend[1].data %}
+                {% for quality in qualities %}
+                    {% if forloop.index0 == itemset[1].quality %}
+                        {% assign itemquality = quality %}
+                    {% endif %}
+                {% endfor %}
+                <li style="color:{{ itemquality }};"><span style="color:black">
+                <strong>{{ itemset[1].name }}</strong> - 
+                {% for item in itemset[1].items %}
+                    {% if forloop.last == false %}
+                        <a href="https://www.elderscrollsbote.de/set={{ itemset[1].id }}" target="_blank">{{ item[1].name }} {{ item[1].trait }}</a>,
+                    {% else %}
+                        <a href="https://www.elderscrollsbote.de/set={{ itemset[1].id }}" target="_blank">{{ item[1].name }} {{ item[1].trait }}</a>
+                    {% endif %}
+                {% endfor %}
+                </span></li>
+            {% endfor %}
+            </ul>
+        {% endcapture %}
+        {% include section.html content=section_content id=section_id title=section_title %}
+    {% endfor %}
+{% endif %}

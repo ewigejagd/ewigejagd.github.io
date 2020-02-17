@@ -23,6 +23,8 @@ baseurl: ""
 
 # List of links in the navigation bar
 navbar-links:
+  Infos:
+    - Die Goldene: "golden"
   Builds & Guides: "https://ewigejagd.github.io"
   ESO News: "https://www.elderscrollsonline.com/de/news"
 #  Resources:
