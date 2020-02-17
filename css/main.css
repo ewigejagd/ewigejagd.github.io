@@ -56,6 +56,12 @@ hr.small {
   color: {{ site.hover-col }} !important;
 }
 
+.alert-eso {
+    color: #A67C00;
+    background-color: #f0e0b2;
+    border-color: #ebd79d !important;
+}
+
 .main-content {
   padding-top: 80px;
 }
