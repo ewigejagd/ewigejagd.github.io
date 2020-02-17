@@ -11,11 +11,11 @@
             <ul>
                 {% for data in equipment[1].data %}
                     {% if data[1].poison and data[1].type %}
-                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}, {{ data[1].poison }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a> - {{ data[1].type }}</li>
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}, {{ data[1].poison }}) - <span class="esb-link"><a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a></span> - {{ data[1].type }}</li>
                     {% elsif data[1].type %}
-                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a> - {{ data[1].type }}</li>
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <span class="esb-link"><a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a></span> - {{ data[1].type }}</li>
                     {% else %}
-                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <a href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a></li>
+                        <li><strong>{{ data[1].name }}</strong> - ({{ data[1].trait }}, {{ data[1].glyph }}) - <span class="esb-link"><a class="esb-link" href="https://www.elderscrollsbote.de/set={{ data[1].setid }}" target="_blank">{{ data[1].setname }}</a></span></li>
                     {% endif %}
                 {% endfor %}
             </ul>

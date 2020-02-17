@@ -10,9 +10,9 @@
                 <li><strong>{{ skilltree[1].name }}</strong> - 
                 {% for skill in skilltree[1].skills %}
                     {% if forloop.last == false %}
-                        <a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a>,
+                        <span class="esb-link"><a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a></span>,
                     {% else %}
-                        <a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a>
+                        <span class="esb-link"><a href="https://www.elderscrollsbote.de/skill={{ skill[0] }}" target="_blank">{{ skill[1] }}</a></span>
                     {% endif %}
                 {% endfor %}
                 </li>

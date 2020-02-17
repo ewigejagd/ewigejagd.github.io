@@ -32,6 +32,7 @@ a:hover,
 a:focus {
   color: {{ site.hover-col }};
 }
+
 blockquote {
   color: #808080;
   font-style: italic;
@@ -45,6 +46,14 @@ hr.small {
   border-width: 4px;
   border-color: inherit;
   border-radius: 3px;
+}
+
+.esb-link a {
+  color: {{ site.link-col }} !important;
+}
+.esb-link a:hover,
+.esb-link a:focus {
+  color: {{ site.hover-col }} !important;
 }
 
 .main-content {
