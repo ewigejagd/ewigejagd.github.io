@@ -1,0 +1,22 @@
+.list-group-dungeon {
+  padding-bottom: 5px
+}
+.list-group-dungeon .list-group-item {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 0;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+.list-group-dungeon .list-group-item:first-child {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.list-group-dungeon:hover .list-group-item {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.list-group-dungeon a {
+  color: #ccc !important;
+}
