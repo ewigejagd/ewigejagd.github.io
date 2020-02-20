@@ -1,0 +1,20 @@
+{% if include.daysfromnow %}
+    {% assign header_id = 'header' | append: include.daysfromnow  %}
+    <h2 id="{{ header_id }}" daysfromnow="{{ include.daysfromnow }}">&nbsp;</h2>
+    <div class="row">
+        {% assign section_id = 'maj' | append: include.daysfromnow  %}
+        <section class="col-xs-12 col-sm-4" id="{{ section_id }}" npc="maj" daysfromnow="{{ include.daysfromnow }}">
+            {% include eso_pledge.html %}
+        </section>
+
+        {% assign section_id = 'glirion' | append: include.daysfromnow  %}
+        <section class="col-xs-12 col-sm-4" id="{{ section_id }}" npc="glirion" daysfromnow="{{ include.daysfromnow }}">
+            {% include eso_pledge.html %}
+        </section>
+
+        {% assign section_id = 'urgarlag' | append: include.daysfromnow  %}
+        <section class="col-xs-12 col-sm-4" id="{{ section_id }}" npc="urgarlag" daysfromnow="{{ include.daysfromnow }}">
+            {% include eso_pledge.html %}
+        </section>
+    </div>
+{% endif %}

@@ -218,6 +218,7 @@ prose:
     - /css
     - /img
     - /js
+    - /esodb
   metadata:
     _posts:
       - name: "layout"

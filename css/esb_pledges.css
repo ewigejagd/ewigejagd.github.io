@@ -1,6 +1,3 @@
-.list-group-dungeon {
-  padding-bottom: 5px
-}
 .list-group-dungeon .list-group-item {
   background-color: rgba(0, 0, 0, 0.25);
   border: 0;
@@ -12,6 +9,9 @@
 .list-group-dungeon .list-group-item:first-child {
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+.list-group-dungeon .list-group-item:last-child {
   padding-bottom: 10px;
 }
 .list-group-dungeon:hover .list-group-item {
