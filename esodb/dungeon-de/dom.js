@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/depths-of-malatar.jpg", "name": "Tiefen von Malatar", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "395", "name": "Sinfonie der Klingen" }, "light": { "id": "382", "name": "Donner des Auroraners" }, "medium": { "id": "381", "name": "Ausbeutender Niedergang" }, "heavy": { "id": "380", "name": "Gefrorener Beobachter" } } }

@@ -1,18 +1,22 @@
-<ul class="list-group list-group-dungeon shadow-z-3" style="border-radius:4px;background-color:#111">
-    <li class="list-group-item">
-        <h3 class="list-group-item-heading text-ellipsis">&nbsp;</h3>
-        <em class="small">&nbsp;</em>
-    </li>
-    <li class="list-group-item">
-        <span class="default">&nbsp;</span>
-    </li>
-    <li class="list-group-item">
-        <img style="width:18px;height:18px;opacity:0"><span class="default">&nbsp;</a>
-    </li>
-    <li class="list-group-item">
-        <img style="width:18px;height:18px;opacity:0"><span class="default">&nbsp;</a>
-    </li>
-    <li class="list-group-item">
-        <img style="width:18px;height:18px;opacity:0"><span class="default">&nbsp;</a>
-    </li>
-</ul>
+{% assign section_id = include.npc | append: include.daysfromnow %}
+<section class="col-xs-12 col-sm-4" id="{{ section_id }}" npc="{{ include.npc }}" daysfromnow="{{ include.daysfromnow }}">
+    <ul class="list-group list-group-dungeon shadow-z-3" id="{{ section_id }}-image">
+        <li class="list-group-item">
+            <h3 class="list-group-item-heading text-ellipsis" id="{{ section_id }}-name">&nbsp;</h3>
+            <em class="small" id="{{ section_id }}-npc">&nbsp;</em>
+        </li>
+        <li class="list-group-item">
+            <span class="label label-danger" title="Monster Set">M</span> <a class="default" id="{{ section_id }}-monster">&nbsp;</a>
+        </li>
+        <li class="list-group-item">
+            <img class="has-tooltip" style="width:18px;height:18px" src="https://ewigejagd.github.io/img/icons/armorlight.png" title="Leichte Rüstung"> <a class="default" id="{{ section_id }}-light">&nbsp;</a>
+        </li>
+        <li class="list-group-item">
+            <img class="has-tooltip" style="width:18px;height:18px" src="https://ewigejagd.github.io/img/icons/armormedium.png" title="Mittlere Rüstung"> <a class="default" id="{{ section_id }}-medium">&nbsp;</a>
+        </li>
+        <li class="list-group-item">
+            <img class="has-tooltip" style="width:18px;height:18px" src="https://ewigejagd.github.io/img/icons/armorheavy.png" title="Schwere Rüstung"> <a class="default" id="{{ section_id }}-heavy">&nbsp;</a>
+        </li>
+    </ul>
+</section>
+

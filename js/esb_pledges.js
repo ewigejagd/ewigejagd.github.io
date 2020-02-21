@@ -20,7 +20,8 @@ var pledges = {
         var url = "https://ewigejagd.github.io/esodb/dungeon-de/" + dungeonId + ".js";
         fetch(url)
            .then(response => response.json())
-           .then(json => callback(sectionId, json.html));
+           .then(json => callback(dungeonId, sectionId, json))
+           .catch(error => callback(dungeonId, sectionId, null));
     },
 
     getDungeonIdByPledge: function(npc, daysfromnow) {
@@ -61,8 +62,22 @@ var pledges = {
             var daysfromnow = parseInt(sections[i].getAttribute("daysfromnow"));
 
             var dungeonId = pledges.getDungeonIdByPledge(npc, daysfromnow);
-            pledges.getDungeonDetailsById(dungeonId, sectionId, (sectionId, html) => {
-                document.getElementById(sectionId).innerHTML = html;
+            pledges.getDungeonDetailsById(dungeonId, sectionId, (dungeonId, sectionId, json) => {
+                if (json !== null) {
+                    document.getElementById(sectionId + "-image").style = "background-image:url("+json.image+")";
+                    document.getElementById(sectionId + "-name").innerHTML = json.name;
+                    document.getElementById(sectionId + "-npc").innerHTML = json.npc;
+                    document.getElementById(sectionId + "-monster").innerHTML = json.set.monster.name;
+                    document.getElementById(sectionId + "-monster").href = "https://www.elderscrollsbote.de/set=" + json.set.monster.id;
+                    document.getElementById(sectionId + "-light").innerHTML = json.set.light.name;
+                    document.getElementById(sectionId + "-light").href = "https://www.elderscrollsbote.de/set=" + json.set.light.id;
+                    document.getElementById(sectionId + "-medium").innerHTML = json.set.medium.name;
+                    document.getElementById(sectionId + "-medium").href = "https://www.elderscrollsbote.de/set=" + json.set.medium.id;
+                    document.getElementById(sectionId + "-heavy").innerHTML = json.set.heavy.name;
+                    document.getElementById(sectionId + "-heavy").href = "https://www.elderscrollsbote.de/set=" + json.set.heavy.id;
+                } else {
+                    document.getElementById(sectionId + "-name").innerHTML = dungeonId;
+                }
             });
         }
     }

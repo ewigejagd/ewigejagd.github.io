@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/fungal-grotto.jpg", "name": "Pilzgrotte I", "npc": "Maj al-Ragath", "set": { "monster": { "id": "173", "name": "Kra'gh" }, "light": { "id": "218", "name": "Spinnenkultistenkutte" }, "medium": { "id": "245", "name": "Vipernbiss" }, "heavy": { "id": "246", "name": "Dreughkönigsschlächter" } } } 

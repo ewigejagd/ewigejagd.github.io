@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/selenes-web.jpg", "name": "Selenes Netz", "npc": "Glirion", "set": { "monster": { "id": "176", "name": "Selene" }, "light": { "id": "252", "name": "Gewänder des Hexers" }, "medium": { "id": "228", "name": "Hircines Schein" }, "heavy": { "id": "253", "name": "Duroks Fluch" } } }

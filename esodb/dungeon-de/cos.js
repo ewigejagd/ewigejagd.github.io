@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/cradle-of-shadows.jpg", "name": "Wiege der Schatten", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "110", "name": "Velidreth" }, "light": { "id": "116", "name": "Gespinst" }, "medium": { "id": "117", "name": "Witwenmacher" }, "heavy": { "id": "115", "name": "Hand von Mephala" } } } 

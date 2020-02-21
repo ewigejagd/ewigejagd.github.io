@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/white-gold-tower.jpg", "name": "Weißgoldturm", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "44", "name": "Molag Kena" }, "light": { "id": "265", "name": "Magiekraftheilung" }, "medium": { "id": "266", "name": "Essenzdieb" }, "heavy": { "id": "267", "name": "Male des Kaiserreichs" } } }
