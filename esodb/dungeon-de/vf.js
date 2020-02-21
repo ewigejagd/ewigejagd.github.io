@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/volenfell.jpg", "name": "Volenfell", "npc": "Glirion", "set": { "monster": { "id": "163", "name": "Bebenschuppe" }, "light": { "id": "230", "name": "Schatzjäger" }, "medium": { "id": "250", "name": "Glaubenskrieger" }, "heavy": { "id": "231", "name": "Schuppen des Dünenbrechers" } } } 

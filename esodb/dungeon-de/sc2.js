@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/spindleclutch.jpg", "name": "Spindeltiefen II", "npc": "Maj al-Ragath", "set": { "monster": { "id": "33", "name": "Blutbrut" }, "light": { "id": "243", "name": "Gebetstuch" }, "medium": { "id": "217", "name": "Höhlenforscher" }, "heavy": { "id": "244", "name": "Albtraumritter" } } }

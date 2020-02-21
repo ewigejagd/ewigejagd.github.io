@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/march-of-sacrifices.jpg", "name": "Marsch der Aufopferung", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "345", "name": "Balorgh" }, "light": { "id": "343", "name": "Hanus Mitgefühl" }, "medium": { "id": "344", "name": "Blutmond" }, "heavy": { "id": "342", "name": "Zuflucht von Ursus" } } } 

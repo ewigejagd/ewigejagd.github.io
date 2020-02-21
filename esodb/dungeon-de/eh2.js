@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/elden-hollow.jpg", "name": "Eldengrund II", "npc": "Maj al-Ragath", "set": { "monster": { "id": "37", "name": "Nachtflamme" }, "light": { "id": "219", "name": "Lichtsprecher" }, "medium": { "id": "247", "name": "Borkenhaut" }, "heavy": { "id": "220", "name": "Unerschrockenen-Bastion" } } }

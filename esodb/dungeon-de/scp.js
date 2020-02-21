@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/scalecaller-peak.jpg", "name": "Gipfel der Schuppenruferin", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "326", "name": "Zaan" }, "light": { "id": "320", "name": "Jorvulds Führung" }, "medium": { "id": "322", "name": "Seuchenschleuder" }, "heavy": { "id": "324", "name": "Fluch von Doylemish" } } } 

@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/wayrest-sewers.jpg", "name": "Kanalisation von Wegesruh I", "npc": "Maj al-Ragath", "set": { "monster": { "id": "162", "name": "Schleimkropf" }, "light": { "id": "221", "name": "Feldarzt" }, "medium": { "id": "222", "name": "Zahnreihe" }, "heavy": { "id": "248", "name": "Rüstung des Feldwebels" } } }

@@ -7,8 +7,8 @@ var pledges = {
             pledges: ["sc2", "bc1", "fg2", "sc1", "dc2", "eh1", "ws2", "fg1", "bc2", "dc1", "eh2", "ws1"],
         },
         glirion: {
-            startpledge: "dk1",
-            pledges: ["dk1", "vom", "coh2", "coa1", "ti", "bh", "ac", "sw", "coa2", "coh1", "vf", "blc1"],
+            startpledge: "dfk",
+            pledges: ["dfk", "vom", "coh2", "coa1", "ti", "bh", "ac", "sw", "coa2", "coh1", "vf", "blc"],
         },
         urgarlag: {
             startpledge: "fv",

@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/the-banished-cells.jpg", "name": "Verbannungszellen II", "npc": "Maj al-Ragath", "set": { "monster": { "id": "40", "name": "Schlund des Infernalen" }, "light": { "id": "214", "name": "Heiligtum" }, "medium": { "id": "215", "name": "Ausbrecher" }, "heavy": { "id": "216", "name": "Quälender" } } }

@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/moon-hunter-keep.jpg", "name": "Mondjägerfeste", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "349", "name": "Vykosa" }, "light": { "id": "347", "name": "Mondjäger" }, "medium": { "id": "348", "name": "Wilder Werwolf" }, "heavy": { "id": "346", "name": "Tenazität des Kerkermeisters" } } } 

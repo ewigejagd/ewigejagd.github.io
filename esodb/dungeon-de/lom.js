@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/lair-of-maarselok.jpg", "name": "Hort von Maarselok", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "403", "name": "Maarselok" }, "light": { "id": "400", "name": "Z'ens Wiedergutmachung" }, "medium": { "id": "401", "name": "Azurfäuleschnitter" }, "heavy": { "id": "399", "name": "Drachenschändung" } } } 

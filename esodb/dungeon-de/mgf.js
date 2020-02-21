@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/moongrave-fane.jpg", "name": "Mondgrab-Tempelstadt", "npc": "Urgarlag (DLC)", "set": { "monster": { "id": "402", "name": "Grundwulf" }, "light": { "id": "397", "name": "Hohlzahndurst" }, "medium": { "id": "398", "name": "Krallen von Dro'Zakar" }, "heavy": { "id": "396", "name": "Renalds Entschlossenheit" } } } 

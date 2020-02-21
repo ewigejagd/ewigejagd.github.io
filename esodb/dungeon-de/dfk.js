@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/direfrost-keep.jpg", "name": "Burg Grauenfrost", "npc": "Glirion", "set": { "monster": { "id": "170", "name": "Eisherz" }, "light": { "id": "238", "name": "Magickaschmiede" }, "medium": { "id": "239", "name": "Schwerfälliger Draugr" }, "heavy": { "id": "251", "name": "Eisschmiede" } } } 

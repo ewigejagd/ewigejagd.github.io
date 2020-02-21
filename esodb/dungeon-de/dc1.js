@@ -1,0 +1,1 @@
+{ "image": "../img/dungeons/darkshade-caverns.jpg", "name": "Dunkelschattenkavernen I", "npc": "Maj al-Ragath", "set": { "monster": { "id": "166", "name": "Wachposten von Rkugamz" }, "light": { "id": "223", "name": "Berührung des Netch" }, "medium": { "id": "224", "name": "Stärke des Automaten" }, "heavy": { "id": "249", "name": "Rüstung der Wahrheit" } } }
