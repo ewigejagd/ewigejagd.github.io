@@ -687,6 +687,66 @@ eso:
                     trait: Göttlich
                     usedby: Ausdauer-DD
                     comment: 
+        pvp:
+            id: pvp
+            title: PvP (handelbar)
+            data:
+                0:
+                    name: Bataillonsverteidiger
+                    id: 361
+                    source: Cyrodiil
+                    trait: Robust
+                    usedby: Tank
+                    comment: 
+                1:
+                    name: Elfenfluch
+                    id: 140
+                    source: Cyrodiil
+                    trait: Göttlich
+                    usedby: Magicka-DD
+                    comment: 
+                2:
+                    name: Licht von Cyrodiil
+                    id: 148
+                    source: Cyrodiil
+                    trait: Göttlich
+                    usedby: Magicka-DD
+                    comment: 
+                3:
+                    name: Morag Tong
+                    id: 156
+                    source: Cyrodiil
+                    trait: Göttlich
+                    usedby: Ausdauer-DD
+                    comment: 
+                4:
+                    name: Phönix
+                    id: 57
+                    source: Kanalisation der Kaiserstadt
+                    trait: Undurchdringlich
+                    usedby: Ausdauer-DD
+                    comment: für PvP
+                5:
+                    name: Tödlicher Stoß
+                    id: 132
+                    source: Cyrodiil
+                    trait: Göttlich
+                    usedby: Ausdauer-DD
+                    comment: 
+                6:
+                    name: Wappen von Cyrodiil
+                    id: 134
+                    source: Cyrodiil
+                    trait: Robust
+                    usedby: Tank
+                    comment: 
+                7:
+                    name: Zauberstratege
+                    id: 357
+                    source: Cyrodiil
+                    trait: Undurchdringlich
+                    usedby: Magicka-DD
+                    comment: für PvP
 ---
 
 <script src="../js/eso_equipment_filter.min.js"></script>
@@ -698,3 +758,5 @@ eso:
 {% include eso_equipment.html equipment=page.eso.equipment.monster %}
 
 {% include eso_equipment.html equipment=page.eso.equipment.zone %}
+
+{% include eso_equipment.html equipment=page.eso.equipment.pvp %}

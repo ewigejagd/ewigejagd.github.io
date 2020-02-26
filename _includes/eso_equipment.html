@@ -2,7 +2,7 @@
     {% assign section_id = include.equipment.id %}
     {% assign section_title = include.equipment.title %}
     {% capture section_content %}
-        <input class="equipment-input" type="text" id="input-{{ section_id }}" onkeyup="filterBySetInSection('{{ section_id }}')" placeholder="Filtern nach Set / Fundort / Trait..." style="margin-bottom: 8px;">
+        <input class="equipment-input" type="text" id="input-{{ section_id }}" onkeyup="filterBySetInSection('{{ section_id }}')" placeholder="Filtern nach Set / Fundort / Trait / geeignet für..." style="margin-bottom: 8px;">
         <table class="equipment-table" id="table-{{ section_id }}">
             <tr>
                 <th>Set</th>
