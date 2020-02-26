@@ -5,7 +5,11 @@
         </h5>
     </header>
     <div class="card-body panel-collapse collapse" id="{{ include.id }}" aria-expanded="false" role="complementary">
-        <div class="panel-body">
+		{% if include.overflow %}
+		<div class="panel-body" style="overflow-x:auto;">
+		{% else %}
+		<div class="panel-body">
+		{% endif %}
             {{ include.content }}
         </div>
     </div>

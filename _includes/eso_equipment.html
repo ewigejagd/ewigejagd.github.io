@@ -1,0 +1,27 @@
+{% if include.equipment %}
+    {% assign section_id = include.equipment.id %}
+    {% assign section_title = include.equipment.title %}
+    {% capture section_content %}
+        <input class="equipment-input" type="text" id="input-{{ section_id }}" onkeyup="filterBySetInSection('{{ section_id }}')" placeholder="Filtern nach Set / Fundort / Trait..." style="margin-bottom: 8px;">
+        <table class="equipment-table" id="table-{{ section_id }}">
+            <tr>
+                <th style="width: 13%;">Set</th>
+                <th style="width: 22%;">Fundort</th>
+                <th style="width: 8%;">Trait</th>
+                <th style="width: 14%;">geeignet für</th>
+                <th style="width: 43%;">Kommentar</th>
+            </tr>
+            </tr>
+            {% for equipment in include.equipment.data %}
+            <tr>
+                <td><span class="esb-link"><a href="https://www.elderscrollsbote.de/set={{ equipment[1].id }}" target="_blank">{{ equipment[1].name }}</a></span></td>
+                <td>{{ equipment[1].source }}</td>
+                <td>{{ equipment[1].trait }}</td>
+                <td>{{ equipment[1].usedby }}</td>
+                <td>{{ equipment[1].comment }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endcapture %}
+    {% include section.html content=section_content id=section_id title=section_title overflow=true %}
+{% endif %}
