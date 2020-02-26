@@ -5,11 +5,11 @@
         <input class="equipment-input" type="text" id="input-{{ section_id }}" onkeyup="filterBySetInSection('{{ section_id }}')" placeholder="Filtern nach Set / Fundort / Trait..." style="margin-bottom: 8px;">
         <table class="equipment-table" id="table-{{ section_id }}">
             <tr>
-                <th style="width: 13%;">Set</th>
-                <th style="width: 22%;">Fundort</th>
-                <th style="width: 8%;">Trait</th>
-                <th style="width: 14%;">geeignet für</th>
-                <th style="width: 43%;">Kommentar</th>
+                <th>Set</th>
+                <th>Fundort</th>
+                <th>Trait</th>
+                <th>geeignet für</th>
+                <th>Kommentar</th>
             </tr>
             </tr>
             {% for equipment in include.equipment.data %}
