@@ -1,0 +1,27 @@
+---
+layout: page
+title: Raid-CP-Rechner
+use-site-title: true
+---
+<script src="../js/eso_cpcalc.js"></script>
+
+<p>
+    <label>aktuelle Championpunkte:</label>
+    <input type="text" id="cp" pattern="[0-9]*" required inputmode="numeric" placeholder="160 - 810" maxlength="3" size="7" style="text-align:center;margin-right:10px" onkeydown="calc()" />
+    <label>Prüfung / Raid:</label>
+    <select id="raid" onchange="calc()" style="width:200px">
+        <option value="vhr">Hel Ra (VHR)</option>
+        <option value="vaa">Ätherisches Archiv (VAA)</option>
+        <option value="vso">Sanctum Ophidia (VSO)</option>
+        <option value="vmol">Schlund von Lorkhaj (VMOL)</option>
+        <option value="vhof">Hallen der Fertigung (VHOF)</option>
+        <option value="vsa">Anstalt Sanctorium (VSA)</option>
+        <option value="vcr">Wolkenruh (VCR)</option>
+        <option value="vss">Sonnspitz (VSS)</option>
+        <option value="vbrp">Schwarzrosengefängnis (VBRP)</option>
+        <option value="vcrmt">Wolkenruh (VCR) mit Chudan als Main-Tank</option>
+        <option value="vcrot">Wolkenruh (VCR) mit Chudan als Off-Tank</option>
+    </select>
+</p>
+
+<p class="alert alert-danger" id="result" style="display:none"></p>
