@@ -27,6 +27,7 @@ navbar-links:
     - Ausrüstung: "equipment"
     - Die Goldene: "golden"
     - Gelöbnisse: "pledges"
+  CP-Rechner: "cpcalc"
   Builds & Guides: "https://ewigejagd.github.io"
   ESO News: "https://www.elderscrollsonline.com/de/news"
 #  Resources:
