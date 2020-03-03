@@ -11,6 +11,14 @@ var vso = {
     cp160: [8,7,9,15,15,0,0],
     cpseq: ["ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic"]
 };
+var vmol = {
+    cp160: [8,7,9,15,15,0,0],
+    cpseq: ["ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic"]
+};
+var vhof = {
+    cp160: [8,7,9,15,15,0,0],
+    cpseq: ["ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ts","ts","ts","ts","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic"]
+};
 
 function calc() {
     var iCp = parseInt(document.getElementById("cp").value);
@@ -20,9 +28,11 @@ function calc() {
 
         var cp, seq;
         switch (iRaid) {
-            case "vhr": cp = vhr.cp160.slice(); seq = vhr.cpseq; break;
-            case "vaa": cp = vaa.cp160.slice(); seq = vaa.cpseq; break;
-            case "vso": cp = vso.cp160.slice(); seq = vso.cpseq; break;
+            case "vhr":  cp = vhr.cp160.slice();  seq = vhr.cpseq; break;
+            case "vaa":  cp = vaa.cp160.slice();  seq = vaa.cpseq; break;
+            case "vso":  cp = vso.cp160.slice();  seq = vso.cpseq; break;
+            case "vmol": cp = vmol.cp160.slice(); seq = vmol.cpseq; break;
+            case "vhof": cp = vhof.cp160.slice(); seq = vhof.cpseq; break;
             default: cp = [0,0,0,0,0,0,0]; seq = []; break;
         }
         var length = Math.floor((iCp-160) / 3);    
