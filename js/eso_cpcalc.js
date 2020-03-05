@@ -31,6 +31,10 @@ var vss = {
     cp160: [8,7,9,0,15,15,0],
     cpseq: ["ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","ic","qr","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic"]
 };
+var vbrp = {
+    cp160: [7,5,7,11,11,13,0],
+    cpseq: ["qr","qr","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","hy","hy","hy","hy","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","hy","hy","hy","hy","hy","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic","ic"]
+};
 
 function calc() {
     var iCp = parseInt(document.getElementById("cp").value);
@@ -48,6 +52,7 @@ function calc() {
             case "vas":  cp = vas.cp160.slice();  seq = vas.cpseq; break;
             case "vcr":  cp = vcr.cp160.slice();  seq = vcr.cpseq; break;
             case "vss":  cp = vss.cp160.slice();  seq = vss.cpseq; break;
+            case "vbrp": cp = vbrp.cp160.slice(); seq = vbrp.cpseq; break;
             default: cp = [0,0,0,0,0,0,0]; seq = []; break;
         }
         var length = Math.floor((iCp-160) / 3);    
