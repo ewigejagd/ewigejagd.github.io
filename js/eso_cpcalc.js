@@ -21,7 +21,11 @@ var vhof = {
 };
 var vas = {
     cp160: [11,9,13,0,21,0,0],
-    cpseq: ["ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ed","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ed","ed","ed","ed","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ic","ic","ic","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss",]
+    cpseq: ["ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ed","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ed","ed","ed","ed","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ic","ic","ic","ic","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss"]
+};
+var vcr = {
+    cp160: [8,7,9,0,15,15,0],
+    cpseq: ["ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","qr","qr","qr","qr","ts","ts","ts","ed","ed","ed","ed","ss","ss","ic","ic","ic","qr","qr","qr","qr","qr","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ts","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ic","ts","ts","ed","ed","ed","ed","ed","ed","ed","ss","ss","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ss","ss","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ts","ts","ts","ts","ss","ss","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ic","ic","ic","ic","ic","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss","ss"]
 };
 
 function calc() {
@@ -38,6 +42,7 @@ function calc() {
             case "vmol": cp = vmol.cp160.slice(); seq = vmol.cpseq; break;
             case "vhof": cp = vhof.cp160.slice(); seq = vhof.cpseq; break;
             case "vas":  cp = vas.cp160.slice();  seq = vas.cpseq; break;
+            case "vcr":  cp = vcr.cp160.slice();  seq = vcr.cpseq; break;
             default: cp = [0,0,0,0,0,0,0]; seq = []; break;
         }
         var length = Math.floor((iCp-160) / 3);    
